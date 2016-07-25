@@ -1,0 +1,58 @@
+{
+	"nodes" : [{
+			"id" : 0,
+			"src" : "http://10.108.92.2:3000/webmeemoo/www/src/parting/Weather.html",
+			"name" : "Weather",
+			"linking" : [{
+					"source_interface" : "is_rain",
+					"target_id" : 1,
+					"target_interface" : "is_rain"
+				}
+			],
+			"link_import" : []
+		}, {
+			"id" : 1,
+			"src" : "http://10.108.92.2:3000/webmeemoo/www/src/parting/Clothesline.html",
+			"name" : "Clothesline",
+			"linking" : [{
+					"source_interface" : "has_clothes",
+					"target_id" : 2,
+					"target_interface" : "has_clothes"
+				}
+			],
+			"link_import" : [{
+					"source_id" : 0,
+					"source_interface" : "is_rain",
+					"target_interface" : "is_rain"
+				}
+			]
+		}, {
+			"id" : 2,
+			"src" : "http://10.108.92.2:3000/webmeemoo/www/src/parting/camera.html",
+			"name" : "camera",
+			"linking" : [{
+					"source_interface" : "photo",
+					"target_id" : 3,
+					"target_interface" : "photo"
+				}
+			],
+			"link_import" : [{
+					"source_id" : 1,
+					"source_interface" : "has_clothes",
+					"target_interface" : "has_clothes"
+				}
+			]
+		}, {
+			"id" : 3,
+			"src" : "http://10.108.92.2:3000/webmeemoo/www/src/parting/Message.html",
+			"name" : "Message",
+			"linking" : [],
+			"link_import" : [{
+					"source_id" : 2,
+					"source_interface" : "photo",
+					"target_interface" : "photo"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+  "info": {
+    "author": "meemoo",
+    "title": "Untitled",
+    "description": "Meemoo app description",
+    "parents": [],
+    "url": ""
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "src": "http://10.108.92.2:3000/webmeemoo/www/src/parting/Weather.html",
+      "x": 457,
+      "y": 75,
+      "w": 200,
+      "h": 210,
+      "state": {
+        "start": 5
+      }
+    },
+    {
+      "id": 1,
+      "src": "http://10.108.92.2:3000/webmeemoo/www/src/parting/Clothesline.html",
+      "x": 856,
+      "y": 78,
+      "w": 200,
+      "h": 210,
+      "state": {}
+    },
+    {
+      "id": 2,
+      "src": "http://10.108.92.2:3000/webmeemoo/www/src/parting/camera.html",
+      "x": 631,
+      "y": 387,
+      "w": 200,
+      "h": 210,
+      "state": {}
+    },
+    {
+      "id": 3,
+      "src": "http://10.108.92.2:3000/webmeemoo/www/src/parting/Message.html",
+      "x": 1018,
+      "y": 381,
+      "w": 200,
+      "h": 210,
+      "state": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": [
+        0,
+        "is_rain"
+      ],
+      "target": [
+        1,
+        "is_rain"
+      ]
+    },
+    {
+      "source": [
+        1,
+        "has_clothes"
+      ],
+      "target": [
+        2,
+        "has_clothes"
+      ]
+    },
+    {
+      "source": [
+        2,
+        "photo"
+      ],
+      "target": [
+        3,
+        "photo"
+      ]
+    }
+  ]
+}
